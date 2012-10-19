@@ -1,0 +1,1 @@
+cuando se mencionan usuarios, no guardamos la mencion, sino que agregamos en el "muro" del usuario mencionado una referencia al mensaje en el que se lo menciono. ambas acciones deberian reflejar el mismo resultado
