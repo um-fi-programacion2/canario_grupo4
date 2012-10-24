@@ -10,7 +10,7 @@ package canario;
  */
 public class Post extends Message {
     
-    private int id_mesage;
+    private int id_message;
     private String body;
     
     

@@ -8,7 +8,7 @@ package canario;
  *
  * @author Bruno
  */
-public class MessageNotification {
+public class MessageNotification extends Notification{
     
     
     private int id_message;

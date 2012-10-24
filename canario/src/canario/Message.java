@@ -10,7 +10,7 @@ package canario;
  */
 public class Message {
     
-    private int id_mesage;
+    private int id_message;
     private int date;
     private int user_creator;
     private int location;

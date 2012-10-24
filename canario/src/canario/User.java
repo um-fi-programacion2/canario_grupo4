@@ -23,7 +23,7 @@ public class User {
     private String biography;
     private String path_photo;
     
-    
+ 
    
     
 }
