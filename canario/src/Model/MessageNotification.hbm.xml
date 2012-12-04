@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 04-dic-2012 11:46:31 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Model.MessageNotification" table="message_notification" catalog="canario">
+        <id name="idNotificationM" type="java.lang.Integer">
+            <column name="id_notificationM" />
+            <generator class="identity" />
+        </id>
+        <property name="idUser" type="java.lang.Integer">
+            <column name="id_user" />
+        </property>
+        <property name="idMessage" type="java.lang.Integer">
+            <column name="id_message" />
+        </property>
+    </class>
+</hibernate-mapping>
