@@ -61,14 +61,14 @@
             </property>
             <property name="mappingDirectoryLocations">
                 <list>
-                    <value>/Mapping/Follower.hbm.xml</value>
-                    <value>/Mapping/FollowerNotification.hbm.xml</value>
-                    <value>/Mapping/Location.hbm.xml</value>
-                    <value>/Mapping/Message.hbm.xml</value>
-                    <value>/Mapping/MessageNotification.hbm.xml</value>
-                    <value>/Mapping/Reference.hbm.xml</value>
-                    <value>/Mapping/Topic.hbm.xml</value>
-                    <value>/Mapping/User.hbm.xml</value>
+                    <value>/mapping/Follower.hbm.xml</value>
+                    <value>/mapping/FollowerNotification.hbm.xml</value>
+                    <value>/mapping/Location.hbm.xml</value>
+                    <value>/mapping/Message.hbm.xml</value>
+                    <value>/mapping/MessageNotification.hbm.xml</value>
+                    <value>/mapping/Reference.hbm.xml</value>
+                    <value>/mapping/Topic.hbm.xml</value>
+                    <value>/mapping/User.hbm.xml</value>
                 </list>
             </property>
             <property name="hibernateProperties">
