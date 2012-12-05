@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/12/2012 11:15:22 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  
+    <union-subclass name="Configuracion.MessageNotification" table="message_notification" extends="Configuracion.Notification">
+        <many-to-one name="id_messsage" class="Configuracion.Message" fetch="select">
+            <column name="id_messsage" />
+        </many-to-one>
+    </union-subclass>
+    
+    
+    
+    
+    <!--  <class name="Configuracion.MessageNotification" table="message_notification" catalog="canario">
+        <id name="idNotificationM" type="java.lang.Integer">
+            <column name="id_notificationM" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="message" class="Configuracion.Message" fetch="select">
+            <column name="id_message" />
+        </many-to-one>
+        <many-to-one name="user" class="Configuracion.User" fetch="select">
+            <column name="id_user" />
+        </many-to-one>
+    </class> -->
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/12/2012 11:15:22 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Configuracion.Reference" table="reference" catalog="canario">
+        <id name="idReference" type="java.lang.Integer">
+            <column name="id_reference" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="message" class="Configuracion.Message" fetch="select">
+            <column name="id_message" />
+        </many-to-one>
+        <many-to-one name="user" class="Configuracion.User" fetch="select">
+            <column name="id_user" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

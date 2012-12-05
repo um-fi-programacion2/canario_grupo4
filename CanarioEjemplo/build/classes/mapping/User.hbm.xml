@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/12/2012 11:15:22 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Configuracion.User" table="user" catalog="canario">
+        <id name="idUser" type="java.lang.Integer">
+            <column name="idUser" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="location" class="Configuracion.Location" fetch="select">
+            <column name="id_location" />
+        </many-to-one>
+        <property name="userName" type="string">
+            <column name="user_name" length="45" />
+        </property>
+        <property name="passwords" type="string">
+            <column name="passwords" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="firstName" type="string">
+            <column name="first_name" length="45" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="45" />
+        </property>
+        <property name="biography" type="java.lang.Integer">
+            <column name="biography" />
+        </property>
+        <property name="pathPhoto" type="string">
+            <column name="path_photo" length="45" />
+        </property>
+        <property name="usercol" type="string">
+            <column name="usercol" length="45" />
+        </property>
+        <set name="followerNotificationsForIdFollower" inverse="true">
+            <key>
+                <column name="id_follower" />
+            </key>
+            <one-to-many class="Configuracion.FollowerNotification" />
+        </set>
+        <set name="messages" inverse="true">
+            <key>
+                <column name="id_user_creator" />
+            </key>
+            <one-to-many class="Configuracion.Message" />
+        </set>
+        <set name="messageNotifications" inverse="true">
+            <key>
+                <column name="id_user" />
+            </key>
+            <one-to-many class="Configuracion.MessageNotification" />
+        </set>
+        <set name="references" inverse="true">
+            <key>
+                <column name="id_user" />
+            </key>
+            <one-to-many class="Configuracion.Reference" />
+        </set>
+        <set name="followerNotificationsForIdUser" inverse="true">
+            <key>
+                <column name="id_user" />
+            </key>
+            <one-to-many class="Configuracion.FollowerNotification" />
+        </set>
+    </class>
+</hibernate-mapping>
