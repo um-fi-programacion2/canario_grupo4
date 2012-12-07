@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/canario</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">1234</property>
+    <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        
+    <mapping resource="mapping/Notification.hbm.xml"/>
+    <mapping resource="mapping/User.hbm.xml"/>
+    <mapping resource="mapping/Topic.hbm.xml"/>
+    <mapping resource="mapping/Follower.hbm.xml"/>
+    <mapping resource="mapping/Reference.hbm.xml"/>
+    <mapping resource="mapping/Message.hbm.xml"/>
+    <mapping resource="mapping/Location.hbm.xml"/>
+    <mapping resource="mapping/FollowerNotification.hbm.xml"/>
+   <mapping resource="mapping/MessageNotification.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

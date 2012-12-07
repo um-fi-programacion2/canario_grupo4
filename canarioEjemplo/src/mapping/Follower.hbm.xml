@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 06-dic-2012 8:50:27 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class catalog="canario" name="Configuracion.Follower" table="follower">
+    <id name="idRelation" type="java.lang.Integer">
+      <column name="id_relation"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="Configuracion.User" fetch="select" name="userByIdFollower">
+      <column name="id_follower" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Configuracion.User" fetch="select" name="userByIdFollowed">
+      <column name="id_followed" not-null="true"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

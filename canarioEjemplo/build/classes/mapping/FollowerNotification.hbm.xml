@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <union-subclass name="Configuracion.FollowerNotification" table="follower_notification" extends="Configuracion.Notification">
+        <property name="id_follower" type="int">
+            <column name="id_follower" not-null="true"/>
+        </property>  
+    </union-subclass>
+</hibernate-mapping>

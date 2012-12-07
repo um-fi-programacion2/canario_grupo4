@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class catalog="canario" name="Configuracion.Message" table="message">
+    <id name="idMessage" type="java.lang.Integer">
+      <column name="id_message"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="Configuracion.Location" fetch="select" name="location">
+      <column name="location" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Configuracion.Topic" fetch="select" name="topic">
+      <column name="topic" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Configuracion.User" fetch="select" name="user">
+      <column name="id_user_creator" not-null="true"/>
+    </many-to-one>
+    <property name="date" type="date">
+      <column length="10" name="date" not-null="true"/>
+    </property>
+    <property name="body" type="string">
+      <column length="200" name="body" not-null="true"/>
+    </property>
+    <set inverse="true" name="references">
+      <key>
+        <column name="id_message" not-null="true"/>
+      </key>
+      <one-to-many class="Configuracion.Reference"/>
+    </set>
+    <set inverse="true" name="messageNotifications">
+      <key>
+        <column name="id_message" not-null="true"/>
+      </key>
+      <one-to-many class="Configuracion.MessageNotification"/>
+    </set>
+  </class>
+</hibernate-mapping>

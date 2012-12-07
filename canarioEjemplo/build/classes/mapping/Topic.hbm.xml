@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Configuracion.Topic" table="topic" catalog="canario">
+        <id name="idTopic" type="java.lang.Integer">
+            <column name="id_topic" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="counter" type="int">
+            <column name="counter" not-null="true" />
+        </property>
+        <set name="messages" inverse="true">
+            <key>
+                <column name="topic" not-null="true" />
+            </key>
+            <one-to-many class="Configuracion.Message" />
+        </set>
+    </class>
+</hibernate-mapping>
